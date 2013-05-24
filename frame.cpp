@@ -14,10 +14,11 @@ int main()
      cin >> name;
 
      const string greeting = "Hello, " + name + "!";
-     const int pad = 0;
-     const int rows = pad * 2 + 3;
+     const int padR = 1;
+     const int padC = 1;
+     const int rows = padR * 2 + 3;
 
-     const string::size_type cols = greeting.size() + pad * 2 + 2;
+     const string::size_type cols = greeting.size() + padC * 2 + 2;
 
      cout << endl;
 
@@ -26,7 +27,7 @@ int main()
           string::size_type c = 0;
 
           while (c != cols) {
-               if (r == pad + 1 && c == pad + 1) {
+               if (r == padR + 1 && c == padC + 1) {
                     cout << greeting;
                     c += greeting.size();
                } else {
