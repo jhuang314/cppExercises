@@ -13,9 +13,15 @@ int main()
      string name;
      cin >> name;
 
+     int padR;
+     int padC;
+     cout << "Please enter row spacing: ";
+     cin >> padR;
+     cout << "please enter column spacing: ";
+     cin >> padC;
+
      const string greeting = "Hello, " + name + "!";
-     const int padR = 1;
-     const int padC = 1;
+
      const int rows = padR * 2 + 3;
 
      const string::size_type cols = greeting.size() + padC * 2 + 2;
