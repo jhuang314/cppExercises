@@ -58,8 +58,32 @@ void squares2()
 
 }
 
+void squares3()
+{
+     cout << "Enter some doubles: ";
+     
+     double x;
+     vector<double> input;
+     vector<double>::size_type maxlen = 0, l;
+     while (cin >> x)
+     {
+//          l = len(x);
+          // if (l > maxlen)
+          //      maxlen = l;
+          input.push_back(x);
+     }
+     streamsize prec = cout.precision();
+     for (vector<double>::size_type i = 0; i < input.size(); i++)
+     {
+          cout << setprecision(3) << setw(7) << input[i] << " "
+               << input[i] * input[i] << setw(0) << setprecision(prec) << endl;
+     }
+     
+
+}
+
 int main()
 {
-     squares2();
+     squares3();
      return 0;
 }
