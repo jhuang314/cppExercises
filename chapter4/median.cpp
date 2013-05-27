@@ -4,6 +4,7 @@
 
 using std::vector;
 using std::sort;
+using std::domain_error;
 
 // returns the median of vec
 double median(vector<double> vec)
@@ -12,7 +13,7 @@ double median(vector<double> vec)
 
      vec_sz size = vec.size();
      
-     if (size() == 0)
+     if (size == 0)
           throw domain_error("median of an empty vector");
 
      sort(vec.begin(), vec.end());
