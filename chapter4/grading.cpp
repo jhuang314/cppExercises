@@ -22,7 +22,7 @@ int main()
           maxlen = max(maxlen, record.name.size());
           students.push_back(record);
      }
-
+     cout << "done reading" << endl;
      sort(students.begin(), students.end(), compare);
 
      for (vector<Student_info>::size_type i = 0; i != students.size(); i++)
@@ -32,9 +32,9 @@ int main()
 
           try
           {
-               double final_grade = grade(students[i]);
+//               double final_grade = grade(students[i]);
                streamsize prec = cout.precision();
-               cout << setprecision(3) << final_grade
+               cout << setprecision(3) << students[i].grade
                     << setprecision(prec);
           }
           catch (domain_error e)
