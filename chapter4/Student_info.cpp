@@ -22,7 +22,7 @@ istream& read_hw(istream& in, vector<double>& hw)
           hw.clear();
 
           double x;
-          while (in >> s)
+          while (in >> x)
                hw.push_back(x);
 
           in.clear();
